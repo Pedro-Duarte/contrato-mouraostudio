@@ -1,0 +1,6 @@
+1 criar formulário
+2 criar lógica no form js para capturar as entradas
+3 criar o contrato
+4 criar a lógisca no contrato js para gerar um arquivo PDF e enviar por email para ambas as partes
+5 criar o css para ambas as páginas 
+6 hospedar o projeto no Github em modo privado
