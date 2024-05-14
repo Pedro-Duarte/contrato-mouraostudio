@@ -7,14 +7,45 @@
     <link type="text/css" rel="stylesheet" href="form/form.css">
 </head>
 <body>
+  
     <form id="formulario" action="contrato/contrato.html" method="post">
-        <label for="name">Nome</label>
-        <input id="name" type="text" name="name">
-
-        <label for="cpf">CPF</label>
-        <input id="cpf" type="text" name="cpf">
+      
+      <h1>Informações Pessoais</h1>
+      
+      <label for="name">Nome</label>
+      <input id="name" type="text" name="name" required>
         
-        <input type="submit" id="botao" value="Gerar Contrato"/>
+      <label for="name-Noiva_Noivo">Nome da Noiva e Noivo</label>
+      <input id="name-Noiva_Noivo" type="text" name="name" required>
+
+      <label for="cpf">CPF</label>
+      <input id="cpf" type="text" name="cpf" required>
+        
+      <label for="endereco">Endereço</label>
+      <input id="endereco" type="text" name="endereco" required>
+        
+      <label for="contato">Contato</label>
+      <input id="contato" type="tel" name="contato" required>
+        
+      <label for="email">E-mail</label>
+      <input id="email" type="email" name="email" required>
+      
+      <h2>Informações do Evento</h2>
+      
+      <p>Qual o pacote contratado?</p>
+      
+      <input type="radio" name="pacote" value="Prata" />Prata
+      <input type="radio" name="pacote" value="Ouro" />Ouro
+      <input type="radio" name="pacote" value="Diamente" />Diamante
+      
+      <label for="data">Data</label>
+      <input type="date" name="data" id="" value="" required>
+      
+      <label for="Local">Endereço</label>
+      <input id="Local" type="text" name="name" required>
+      
+      <input type="submit" id="botao" value="Gerar Contrato"/>
+      
     </form>
     <script src="form/form.js"></script>
 </body>
