@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('endereco').value = '';
         document.getElementById('contato').value = '';
         document.getElementById('email').value = '';
-        document.getElementsByName('pacote').value = '';
         document.getElementById('data').value = '';
         document.getElementById('cerimonia').value = '';
         document.getElementById('hora-cerimonia').value = '';
