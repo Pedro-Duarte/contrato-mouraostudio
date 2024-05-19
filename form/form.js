@@ -10,16 +10,38 @@ document.addEventListener('DOMContentLoaded', function() {
         // Capturar os valores dos campos do formulário
         const nome = document.getElementById('name').value;
         const cpf = document.getElementById('cpf').value;
+        const nomes = document.getElementById('name-Noiva_Noivo').value;
+        const endereco = document.getElementById('endereco').value;
+        const contato = document.getElementById('contato').value;
+        const email = document.getElementById('email').value;
+        const pacote = document.getElementsByName('pacote').value;
+        const data = document.getElementById('data').value;
+        const cerimonia = document.getElementById('cerimonia').value;
+        const hora1 = document.getElementById('hora-cerimonia').value;
+        const recepcao = document.getElementById('recepcao').value;
+        const hora2 = document.getElementById('hora-recepcao').value;
+        const convidados = document.getElementById('convidados').value;
 
         // Exibir os valores capturados no console (exemplo)
         console.log('Nome:', nome);
         console.log('CPF:', cpf);
+        console.log('Pacote:', pacote);
 
         // Aqui você pode manipular os dados como desejar, por exemplo, enviar para um servidor via AJAX
 
         // Limpar os campos do formulário após a captura dos dados (opcional)
         document.getElementById('name').value = '';
+        document.getElementById('name-Noiva_Noivo').value = '';
         document.getElementById('cpf').value = '';
+        document.getElementById('endereco').value = '';
+        document.getElementById('contato').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('data').value = '';
+        document.getElementById('cerimonia').value = '';
+        document.getElementById('hora-cerimonia').value = '';
+        document.getElementById('recepcao').value = '';
+        document.getElementById('hora-recepcao').value = '';
+        document.getElementById('convidados').value = '';
     });
 
     // Adicionar um evento de "submit" ao formulário
