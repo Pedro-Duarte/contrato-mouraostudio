@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         evento.preventDefault();
 
         // Capturar os valores dos campos do formulário
-        const nome = document.getElementById('name').value;
+        const nome = document.getElementById('nome').value;
         const cpf = document.getElementById('cpf').value;
         const nomes = document.getElementById('name-Noiva_Noivo').value;
         const endereco = document.getElementById('endereco').value;
@@ -22,12 +22,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const hora2 = document.getElementById('hora-recepcao').value;
         const convidados = document.getElementById('convidados').value;
 
-        // Exibir os valores capturados no console (exemplo)
-        console.log('Nome:', nome);
-        console.log('CPF:', cpf);
-        console.log('Pacote:', pacote);
+        localStorage.setItem('name', nome);
+        localStorage.setItem('cpf', cpf);
+        localStorage.setItem('nomes', nomes);
+        localStorage.setItem('endereço', endereco);
+        localStorage.setItem('contato', contato);
+        localStorage.setItem('email', email);
+        localStorage.setItem('pacote', pacote);
+        localStorage.setItem('data', data);
+        localStorage.setItem('cerimonia', cerimonia);
+        localStorage.setItem('hora1', hora1);
+        localStorage.setItem('recepcao', recepcao);
+        localStorage.setItem('hora2', hora2);
 
-        // Aqui você pode manipular os dados como desejar, por exemplo, enviar para um servidor via AJAX
+        // Atualizar o texto existente com os dados capturados e iserir no contrato
+        // Atualizar
+        const nomeContratante = document.getElementById('nomeContratante');
+        const emailUsuario = document.getElementById('emailUsuario');
+
+        // Inserir
+        nomeUsuario.textContent = nome;
+        emailUsuario.textContent = email;
+
 
         // Limpar os campos do formulário após a captura dos dados (opcional)
         document.getElementById('name').value = '';
