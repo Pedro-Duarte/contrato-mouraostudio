@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Capturar os valores dos campos do formulário
             const nome = document.getElementById('nome').value;
             const cpf = document.getElementById('cpf').value;
+            const rg = document.getElementById('rg').value;
             const nomes = document.getElementById('name-Noiva_Noivo').value;
             const endereco = document.getElementById('endereco').value;
             const contato = document.getElementById('contato').value;
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Armazenar os dados no localStorage
             localStorage.setItem('nome', nome);
             localStorage.setItem('cpf', cpf);
+            localStorage.setItem('rg', rg);
             localStorage.setItem('nomes', nomes);
             localStorage.setItem('endereco', endereco);
             localStorage.setItem('contato', contato);
@@ -36,20 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('convidados', convidados);
 
             // Redirecionar com base no pacote
-            if (pacote === "prata") {
+            if (pacote === "Prata – Assessoria do Dia") {
                 window.location.href = "../contrato-prata/contrato-prata.html";
-            } else if (pacote === "ouro") {
+            } else if (pacote === "Ouro - Assessoria Parcial") {
                 window.location.href = "../contrato-ouro/contrato-ouro.html";
-            } else if (pacote === "diamante") {
+            } else if (pacote === "Diamante - Assessoria Completa") {
                 window.location.href = "../contrato-diamante/contrato-diamante.html";
             }
         });
     }
 
-    if (window.location.pathname.includes('contrato-prata.html')) {
+    if (window.location.pathname.includes('contrato-prata.html'||'contrato-ouro.html'||'contrato-diamante.html')) {
         // Recuperar os dados do localStorage
         const nome = localStorage.getItem('nome');
         const cpf = localStorage.getItem('cpf');
+        const rg = localStorage.getItem('rg');
         const nomes = localStorage.getItem('nomes');
         const endereco = localStorage.getItem('endereco');
         const contato = localStorage.getItem('contato');
@@ -65,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Atualizar o texto existente com os dados capturados
         document.getElementById('nome_contratante').textContent = nome || '';
         document.getElementById('cpf_contratante').textContent = cpf || '';
+        document.getElementById('rg_contratante').textContent = rg || '';
         document.getElementById('noivo_noiva').textContent = nomes || '';
         document.getElementById('endereco_contratante').textContent = endereco || '';
         document.getElementById('contato_contratante').textContent = contato || '';
