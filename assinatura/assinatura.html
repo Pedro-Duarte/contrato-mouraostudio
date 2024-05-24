@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Comparação Facial</title>
+            <style>
+                #video, #photo {
+                    width: 100%;
+                    max-width: 320px;
+                }
+                .hidden {
+                    display: none;
+                }
+            </style>
+        </head>
+    <body>
+        <h2>Captura de Documento</h2>
+        <div id="instructions-document">
+            <p>Por favor, autorize o uso da câmera. Posicione o documento de identificação (RG ou CNH) de forma legível na frente da câmera e clique em "Capturar Documento".</p>
+        </div>
+        <video id="video" autoplay></video>
+        <button id="captureDocument">Capturar Documento</button>
+        <canvas id="canvasDocument" class="hidden"></canvas>
+        <img id="photoDocument" alt="Foto do Documento" class="hidden">
+
+        <h2>Captura de Selfie</h2>
+        <div id="instructions-selfie" class="hidden">
+            <p>Posicione seu rosto no centro da câmera, com boa iluminação e fundo neutro. Clique em "Capturar Selfie".</p>
+        </div>
+        <video id="videoSelfie" class="hidden" autoplay></video>
+        <button id="captureSelfie" class="hidden">Capturar Selfie</button>
+        <canvas id="canvasSelfie" class="hidden"></canvas>
+        <img id="photoSelfie" alt="Selfie" class="hidden">
+
+        <button id="compareFaces" class="hidden">Comparar Rostos</button>
+        <p id="comparisonResult"></p>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@latest/dist/face-api.min.js"></script>
+        <script defer src="assinatura.js"></script>
+    </body>
+</html>

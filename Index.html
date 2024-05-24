@@ -8,59 +8,90 @@
 </head>
 <body>
   
-    <form id="formulario">
+    <form class="form" id="formulario">
       
       <h1>Informações Pessoais</h1>
       
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" name="name" required>
-        
-      <label for="name-Noiva_Noivo">Nome da Noiva e Noivo</label>
-      <input id="name-Noiva_Noivo" type="text" name="name" required>
+      <div class="nome">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" name="name" required>
+      </div>
 
-      <label for="cpf">CPF</label>
-      <input id="cpf" type="cpf" name="cpf" required>
+      <div class="noivos">          
+        <label for="name-Noiva_Noivo">Nome da Noiva e Noivo</label>
+        <input id="name-Noiva_Noivo" type="text" name="name" required>
+      </div>
 
-      <label for="rg">Identidade</label>
-      <input id="rg" type="identidade" name="rg" required>
+      <div class="cpf">
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="cpf" name="cpf" required>
+      </div>
+
+      <div class="rg">
+        <label for="rg">Identidade</label>
+        <input id="rg" type="identidade" name="rg" required>
+      </div>    
+
+      <div class="endereco">
+        <label for="endereco">Endereço</label>
+        <input id="endereco" type="text" name="endereco" required>
+      </div>    
+
+      <div class="contato">
+        <label for="contato">Contato</label>
+        <input id="contato" type="tel" name="contato" required>
+      </div>    
+
+      <div class="email">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" required>
+      </div>  
+
+        <h2>Informações do Evento</h2>
         
-      <label for="endereco">Endereço</label>
-      <input id="endereco" type="text" name="endereco" required>
+      <div class="pacote">  
+        <p>Qual o pacote contratado?</p>  
+
+        <input type="radio" name="pacote" value="Prata – Assessoria do Dia" checked/>Prata – Assessoria do Dia
+        <input type="radio" name="pacote" value="Ouro - Assessoria Parcial" />Ouro - Assessoria Parcial
+        <input type="radio" name="pacote" value="Diamente - Assessoria Completa" />Diamente - Assessoria Completa
         
-      <label for="contato">Contato</label>
-      <input id="contato" type="tel" name="contato" required>
+      </div> 
         
-      <label for="email">E-mail</label>
-      <input id="email" type="email" name="email" required>
-      
-      <h2>Informações do Evento</h2>
-      
-      <p>Qual o pacote contratado?</p>
-      
-      <input type="radio" name="pacote" value="Prata – Assessoria do Dia" checked/>Prata – Assessoria do Dia
-      <input type="radio" name="pacote" value="ouro" />Ouro
-      <input type="radio" name="pacote" value="diamente" />Diamante
-      
-      <label for="data">Data</label>
-      <input type="date" name="data" id="data" value="" required>
-      
-      <label for="cerimonia">Local da Cerimônia</label>
-      <input id="cerimonia" type="text" name="name" required>
-      
-      <label for="hora-cerimonia">Horário</label>
-      <input id="hora-cerimonia" type="time" name="hora" required>
-      
-      <label for="recepcao">Local da Recepção</label>
-      <input id="recepcao" type="text" name="recepcao" required>
-      
-      <label for="hora-recepcao">Horário</label>
-      <input id="hora-recepcao" type="time" name="hora" required>
-      
-      <label for="convidados">Número de Convidados</label>
-      <input type="number" name="convidados" id="convidados" required/>
-      
-      <input type="submit" id="botao" value="Gerar Contrato"/>
-      
+      <div class="data">
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data" value="" required>
+      </div>
+        
+      <div class="cerimonia">
+        <label for="cerimonia">Local da Cerimônia</label>
+        <input id="cerimonia" type="text" name="name" required>
+      </div>
+        
+      <div class="hora-cerimonia">
+        <label for="hora-cerimonia">Horário</label>
+        <input id="hora-cerimonia" type="time" name="hora" required>
+      </div>  
+
+      <div class="recepcao">
+        <label for="recepcao">Local da Recepção</label>
+        <input id="recepcao" type="text" name="recepcao" required>
+      </div>
+
+      <div class="hora-recepcao">
+        <label for="hora-recepcao">Horário</label>
+        <input id="hora-recepcao" type="time" name="hora" required>
+      </div>  
+
+      <div class="convidados">
+        <label for="convidados">Número de Convidados</label>
+        <input type="number" name="convidados" id="convidados" required/>
+      </div>  
+
+      <div class="gerarContrato">
+        <input type="submit" id="botao" value="Gerar Contrato"/>
+      </div>
+
     </form>
     <script src="form/form.js"></script>
 </body>
