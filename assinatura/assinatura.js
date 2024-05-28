@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Compara os rostos das fotos capturadas
     compareFacesButton.addEventListener('click', async function() {
         // Converte as fotos capturadas em objetos de imagem
-        const documentImage = await faceapi.bufferToImage(canvasDocument.toDataURL('image/png'));
-        const selfieImage = await faceapi.bufferToImage(canvasSelfie.toDataURL('image/png'));
+        const documentImage = await faceapi.bufferToImage(photoDocument.src);
+        const selfieImage = await faceapi.bufferToImage(photoSelfie.src);
 
         // Detecta rostos nas imagens capturadas
         const documentDetections = await faceapi.detectAllFaces(documentImage).withFaceLandmarks().withFaceDescriptors();
