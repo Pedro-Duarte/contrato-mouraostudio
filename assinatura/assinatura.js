@@ -22,9 +22,9 @@ function capturePhoto(videoElement, canvasElement, photoElement) {
 
 document.addEventListener('DOMContentLoaded', async function() {
     // Carrega os modelos necessários para detecção e reconhecimento facial
-    await faceapi.nets.ssdMobilenetv1.loadFromUri('../models');
-    await faceapi.nets.faceLandmark68Net.loadFromUri('../models');
-    await faceapi.nets.faceRecognitionNet.loadFromUri('../models');
+    await faceapi.nets.ssdMobilenetv1.loadFromUri('../models/');
+    await faceapi.nets.faceLandmark68Net.loadFromUri('../models/');
+    await faceapi.nets.faceRecognitionNet.loadFromUri('../models/');
 
     // Seleção dos elementos do DOM relacionados à captura do documento
     const videoDocument = document.getElementById('video');
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Compara os rostos das fotos capturadas
     compareFacesButton.addEventListener('click', async function() {
         // Converte as fotos capturadas em objetos de imagem
-        const documentImage = await faceapi.bufferToImage(photoDocument.src);
-        const selfieImage = await faceapi.bufferToImage(photoSelfie.src);
+        const documentImage = await faceapi.bufferToImage(canvasDocument.toDataURL('image/png'));
+        const selfieImage = await faceapi.bufferToImage(canvasSelfie.toDataURL('image/png'));
 
         // Detecta rostos nas imagens capturadas
         const documentDetections = await faceapi.detectAllFaces(documentImage).withFaceLandmarks().withFaceDescriptors();
