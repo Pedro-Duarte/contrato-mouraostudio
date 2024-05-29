@@ -22,9 +22,9 @@ function capturePhoto(videoElement, canvasElement, photoElement) {
 
 document.addEventListener('DOMContentLoaded', async function() {
     // Carrega os modelos necessários para detecção e reconhecimento facial
-    await faceapi.nets.ssdMobilenetv1.loadFromUri('/models');
-    await faceapi.nets.faceLandmark68Net.loadFromUri('/models');
-    await faceapi.nets.faceRecognitionNet.loadFromUri('/models');
+    await faceapi.nets.ssdMobilenetv1.loadFromUri('../models');
+    await faceapi.nets.faceLandmark68Net.loadFromUri('../models');
+    await faceapi.nets.faceRecognitionNet.loadFromUri('../models');
 
     // Seleção dos elementos do DOM relacionados à captura do documento
     const videoDocument = document.getElementById('video');
