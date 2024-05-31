@@ -1,42 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assinatura</title>
-    <style>
-        #video, #photo {
-            width: 100%;
-            max-width: 320px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Comparação de fotos - FaceAPI</title>
+    <link rel="stylesheet" href="assinatura.css">
 </head>
 <body>
-    <h2>Captura de Documento</h2>
-    <div id="instructions-document">
-        <p>Por favor, autorize o uso da câmera. Posicione o documento de identificação (RG ou CNH) de forma legível na frente da câmera e clique em "Capturar Documento".</p>
+    <h1>Comparação de fotos</h1>
+
+    <div id="camera-container">
+        <video id="video"></video>
+        <button id="capture-document-photo">Capturar foto do documento</button>
     </div>
-    <video id="video" autoplay></video>
-    <button id="captureDocument">Capturar Documento</button>
-    <canvas id="canvasDocument" class="hidden"></canvas>
-    <img id="photoDocument" alt="Foto do Documento" class="hidden">
 
-    <h2>Captura de Selfie</h2>
-    <div id="instructions-selfie" class="hidden">
-        <p>Posicione seu rosto no centro da câmera, com boa iluminação e fundo neutro. Clique em "Capturar Selfie".</p>
+    <div id="selfie-container">
+        <video id="selfie-video"></video>
+        <button id="capture-selfie">Capturar selfie</button>
     </div>
-    <video id="videoSelfie" class="hidden" autoplay></video>
-    <button id="captureSelfie" class="hidden">Capturar Selfie</button>
-    <canvas id="canvasSelfie" class="hidden"></canvas>
-    <img id="photoSelfie" alt="Selfie" class="hidden">
 
-    <button id="compareFaces" class="hidden">Comparar Rostos</button>
-    <p id="comparisonResult"></p>
+    <div id="results">
+        <h2>Resultados</h2>
+        <p id="similarity-score"></p>
+    </div>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@latest/dist/face-api.min.js"></script>
-    <script defer src="assinatura.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-face-recognition@latest"></script>
+    <script src="assinatura.js"></script>
 </body>
 </html>
