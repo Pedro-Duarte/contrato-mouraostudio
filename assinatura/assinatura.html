@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assinatura</title>
-    <style>
-        #video, #photo {
-            width: 100%;
-            max-width: 320px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="assinatura.css">
+  </head>
+
+  <body>
     <h2>Captura de Documento</h2>
     <div id="instructions-document">
-        <p>Por favor, autorize o uso da câmera. Posicione o documento de identificação (RG ou CNH) de forma legível na frente da câmera e clique em "Capturar Documento".</p>
+      <p>Por favor, autorize o uso da câmera. Posicione o documento de identificação (RG ou CNH) de forma legível na frente da câmera e clique em "Capturar Documento".</p>
     </div>
     <video id="video" autoplay></video>
     <button id="captureDocument">Capturar Documento</button>
@@ -26,7 +20,7 @@
 
     <h2>Captura de Selfie</h2>
     <div id="instructions-selfie" class="hidden">
-        <p>Posicione seu rosto no centro da câmera, com boa iluminação e fundo neutro. Clique em "Capturar Selfie".</p>
+      <p>Posicione seu rosto no centro da câmera, com boa iluminação e fundo neutro. Clique em "Capturar Selfie".</p>
     </div>
     <video id="videoSelfie" class="hidden" autoplay></video>
     <button id="captureSelfie" class="hidden">Capturar Selfie</button>
@@ -36,10 +30,10 @@
     <button id="compareFaces" class="hidden">Comparar Rostos</button>
     <p id="comparisonResult"></p>
 
-    <!-- Botão para alternar câmera -->
-    <button id="toggleCamera" class="hidden">Girar Câmera</button>
+    <button id="toggleCameraButton">Girar Câmera</button>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@latest/dist/face-api.min.js"></script>
-    <script defer src="assinatura.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@latest/dist/face-api.min.js"></script>
+    <script src="assinatura.js"></script>
+  </body>
+
 </html>
